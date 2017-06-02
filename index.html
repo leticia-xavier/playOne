@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player com Javascript</title>
+	<link rel="stylesheet" type="text/css" href="plugin/css/style.css"> <!-- carregando css do plugin -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- carregando meu estilo de pagina -->
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script> <!-- carregando primeiro jquery -->
+    <script type="text/javascript" src="plugin/jquery-jplayer/jquery.jplayer.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="plugin/ttw-music-player-min.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="js/myplaylist.js"></script> <!-- carregando js criado para playlist -->
+
+   <!-- inicializando o plugin -->
+    <script type="text/javascript">
+    	// funcao criada para descricao- texto a ser apresentado na pagina
+        $(document).ready(function(){ 
+            var description = 'One Direction (ocasionalmente abreviado por 1D) é uma boyband pop formada na cidade de Londres, Reino Unido, em 2010. Ela é composta pelos britânicos Harry Styles, Liam Payne, Louis Tomlinson e pelo irlandês Niall Horan.Zayn Malik, um dos integrantes, deixou o grupo em 25 de março de 2015. O quinteto foi formado após seus membros participarem do reality show musical The X Factor como competidores solo, até que, durante o programa, a cantora Nicole Scherzinger e Simon Cowell os uniram para concorrer como um grupo. A banda acabou em terceiro lugar do programa, atrás de Matt Cardle e Rebecca Ferguson.';
+
+            $('body').ttwMusicPlayer(myPlaylist, {
+                autoPlay:false, //autoplay sem inicializar com play
+                description:description,
+                jPlayer:{
+                    swfPath:'plugin/jquery-jplayer' //diretorio do plugin para carregar
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
